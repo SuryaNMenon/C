@@ -1,0 +1,16 @@
+Debug/*
+*/Debug/*
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+bin/*
+*/bin/*
+obj/*
+*/obj/*
+*.cbp
+*.depend
+*.layout
+.vs/*
+*/.vs/*
+*.o
