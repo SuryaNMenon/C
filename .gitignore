@@ -14,3 +14,5 @@ obj/*
 .vs/*
 */.vs/*
 *.o
+.vscode/settings.json
+*.exe
