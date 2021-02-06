@@ -18,9 +18,11 @@ void Enqueue(int elem){
     if(Full()){
         printf("Queue Overflow - Too many elements.\n");
         exit(1);
-    }
-    if(front == -1) front = 0;
-    if(rear == MAX-1) rear = 0;
+    }   
+    if(front == -1) 
+        front = 0;
+    if(rear == MAX-1) 
+        rear = 0;
     else rear = rear+1;
     queuecirc[rear] = elem;
 }
@@ -82,7 +84,7 @@ void main(){
         switch(choice){
             case 1:
                 printf("Enter the element to be Enqueued\n");
-                scanf("%d",elem);
+                scanf("%d",&elem);
                 Enqueue(elem);
                 Print();
                 break;
