@@ -10,7 +10,7 @@ int Empty(){
 }
 
 int Full(){
-    if((front==0 && rear == MAX-1) || (front = rear+1)) return 1;
+    if((front==0 && rear == MAX-1) || (front == rear+1)) return 1;
     else return 0;
 }
 
@@ -23,7 +23,7 @@ void Enqueue(int elem){
         front = 0;
     if(rear == MAX-1) 
         rear = 0;
-    else rear = rear+1;
+    rear = rear+1;
     queuecirc[rear] = elem;
 }
 
@@ -34,7 +34,7 @@ int Dequeue(){
     }
     int item = queuecirc[front];
     if(front == rear) front = rear = -1;
-    if(front==MAX-1) front = 0;
+    else if(front==MAX-1) front = 0;
     else front = front+1;
     return item;
 }
@@ -67,7 +67,7 @@ void Print(){
             i++;
         }
         i=0;
-        //i=front;
+        //i=front
         while(i<=rear){
             printf("%d ",queuecirc[i]);
             i++;
