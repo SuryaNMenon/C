@@ -40,7 +40,7 @@ void main(){
             case 1:
                 printf("Enter element\n");
                 scanf("%d",&elem);
-                Insert(root, elem);
+                root = Insert(root, elem);
                 break;
             case 2:
                 printf("Height of Tree is %d\n",Height(root));
