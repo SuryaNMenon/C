@@ -16,3 +16,5 @@ obj/*
 *.o
 .vscode/settings.json
 *.exe
+.vscode/launch.json
+.vscode/tasks.json
