@@ -15,9 +15,9 @@ void GetNewGraph(){
     for(i=0;i<=n-1;i++){
         printf("Enter the edge in origin destination format. -1 -1 to exit.\n");
         scanf("%d %d",&origin,&destin);
-        if(origin == 1 && destin == -1) break;
+        if(origin == -1 && destin == -1) break;
         if(origin <0 || origin >=n || destin < 0 || destin >=n){
-            printf("Invalid Vertex.");
+            printf("Invalid Edge.");
             i--;
         }
         else{
