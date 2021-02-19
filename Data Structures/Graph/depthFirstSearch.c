@@ -50,7 +50,7 @@ int Pop(){
 
 void DFSearch(int v){
     int i;
-    push(v);
+    Push(v);
     while(!EmptyStack()){
         v = Pop();
         if(state[v]== initial){
