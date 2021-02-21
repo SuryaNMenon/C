@@ -18,3 +18,4 @@ obj/*
 *.exe
 .vscode/launch.json
 .vscode/tasks.json
+Test.c
