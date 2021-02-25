@@ -19,11 +19,9 @@ void Enqueue(int elem){
         printf("Queue Overflow - Too many elements.\n");
         exit(1);
     }   
-    if(front == -1) 
-        front = 0;
-    if(rear == MAX-1) 
-        rear = 0;
-    rear = rear+1;
+    if(front == -1) front = 0;
+    else if(rear == MAX-1) rear = 0;
+    else rear = rear+1;
     queuecirc[rear] = elem;
 }
 
