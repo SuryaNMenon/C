@@ -63,7 +63,7 @@ void insertN(int elem, int pos){
     for(i=0;i<pos-2;i++){
         temp = temp->next;
     }
-    newNode->next = temp->next;
+    newNode ->next = temp->next;
     temp->next->prev = newNode;
     newNode->prev = temp;
     temp->next = newNode;
@@ -87,14 +87,13 @@ void Delete(int pos){
         return;
     }
     struct Node* del = head;
-    int i;
-    for(i=0;i<pos-1;i++){
+    int i; for(i=0;i<pos-1;i++){
         del = del->next;
     }
     del->prev->next = del->next;
     del->next->prev = del->prev;
     free(del);
-    
+    linkedListLength--;
     // struct Node* delnode = temp->next;
     // struct Node* fillnode = delnode->next;
     // temp->next = delnode->next;
