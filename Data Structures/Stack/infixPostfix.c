@@ -45,7 +45,7 @@ void main(){
                 printf("%c ",x);
         }
         else{
-            while(priority(stack[top])>=priority(*e))
+            while(priority(stack[top])>=priority(*e)){
                 printf("%c " ,Pop());
             Push(*e);
         }
