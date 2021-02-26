@@ -35,10 +35,9 @@ void Enqueue(int elem){
     //     front = temp;
     // }
     if(front == NULL) front = temp;
-    else {
+    else 
         rear->link = temp;
-        rear = temp;
-    }
+    rear = temp;
 }
 
 int Dequeue(){
