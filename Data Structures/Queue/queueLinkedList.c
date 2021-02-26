@@ -37,7 +37,7 @@ void Enqueue(int elem){
     if(front == NULL) front = temp;
     else {
         rear->link = temp;
-        rear = rear+1;
+        rear = temp;
     }
 }
 
