@@ -113,7 +113,7 @@ struct Node* CreateList(struct Node* last){
     printf("Enter element to be inserted: ");
     scanf("%d",&data);
     last = InsertEmpty(last, data);
-    for(i=2;i<=n;i++){
+    for(i=2;i<=n;i++){ // i=2 as normally i is inputted in loop as i=1 with n<=1
         printf("Enter the element to be inserted: ");
         scanf("%d",&data);
         last = InsertEnd(last, data);
