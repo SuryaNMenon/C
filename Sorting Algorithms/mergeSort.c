@@ -16,8 +16,8 @@ void MergeSort(int *arr, int n){
 	if(n<2) return;
 	mid = n/2;
 
-	int *L = (int)malloc(mid*sizeof(int));
-	int *R = (int)malloc((n-mid)*sizeof(int));
+	int *L = (int *)malloc(mid*sizeof(int));
+	int *R = (int *)malloc((n-mid)*sizeof(int));
 
 	for(i=0;i<mid;i++) L[i] = arr[i];
 	for(i=mid;i<n;i++) R[i-mid] = arr[i];
