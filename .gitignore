@@ -19,3 +19,4 @@ obj/*
 .vscode/launch.json
 .vscode/tasks.json
 Test.c
+Sandbox.c
