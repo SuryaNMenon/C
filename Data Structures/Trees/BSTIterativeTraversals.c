@@ -39,8 +39,8 @@ struct Node* GetNewNode(struct Node* root, int data){
 
 struct Node* Insert(struct Node* root, int data){
     if(root == NULL) root = GetNewNode(root, data);
-    else if(data <= root->data) root = Insert(root->left, data);
-    else root = Insert(root->right, data);
+    else if(data <= root->data) root->left = Insert(root->left, data);
+    else root->right = Insert(root->right, data);
     return root;
 }
 
@@ -68,12 +68,12 @@ void Inorder(struct Node* root){
     }
     while(1){
         while(ptr->left != NULL){
-            Push(ptr->left);
+            Push(ptr);
             ptr = ptr->left;
         }
         while(ptr->right == NULL){
             printf("%d ", ptr->data);
-            if(isEmpty) return;
+            if(isEmpty()) return;
             ptr = Pop();
         }
         printf("%d ", ptr->data);
@@ -87,19 +87,22 @@ void Postorder(struct Node* root){
         printf("Empty Tree\n");
         return;
     }
-    struct Node* q = ptr;
-    while(ptr->left != NULL){
+    struct Node* q = root;
+    while(1){
+        while(ptr->left != NULL){
+            Push(ptr);
+            ptr = ptr->left;
+        }
+        while(ptr->right == NULL || ptr->right == q){
+            printf("%d ", ptr->data);
+            q = ptr;
+            if(isEmpty()) return;
+            ptr = Pop();
+        }
         Push(ptr);
-        ptr = ptr->left;
+        ptr = ptr->right;
     }
-    while(ptr->right == NULL || ptr->right == q){
-        printf("%d ", ptr->data);
-        q = ptr;
-        if(isEmpty()) return;
-        ptr = Pop();
-    }
-    Push(ptr);
-    ptr = ptr->right;
+    printf("\n");
 }
 
 void main(){
